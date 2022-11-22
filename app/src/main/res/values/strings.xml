@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ExchangeRate</string>
+    <string name="popular" />
+    <string name="favorite" />
+</resources>
