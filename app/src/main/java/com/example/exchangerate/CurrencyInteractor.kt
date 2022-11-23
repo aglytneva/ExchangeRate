@@ -10,5 +10,8 @@ class CurrencyInteractor(private val currencyRepo: CurrencyRepo) {
     suspend fun getCurrencyRates(): Either<Throwable, List<CurrencyModel>> {
         return attempt { currencyRepo.getCurrencyFromRepo() }
     }
+    suspend fun getDate(): Either<Throwable, String> {
+        return attempt { currencyRepo.getDateFromRepo()}
+    }
 
 }

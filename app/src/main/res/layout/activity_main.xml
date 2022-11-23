@@ -10,10 +10,10 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="30dp"
-        android:gravity="bottom"
-        app:layout_constraintBottom_toBottomOf="@+id/cvCardBottom"
+        android:background="@color/dark_purple"
         android:backgroundTint="@color/dark_purple"
-        android:background="@color/dark_purple"/>
+        android:gravity="bottom"
+        app:layout_constraintBottom_toBottomOf="@+id/cvCardBottom" />
 
     <FrameLayout
         android:id="@+id/container"
@@ -22,34 +22,39 @@
         app:layout_constraintBottom_toTopOf="@+id/cvCardBottom"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+        app:layout_constraintTop_toTopOf="parent"
+        android:focusableInTouchMode="false"
+        android:isScrollContainer="false">
 
     </FrameLayout>
 
-<androidx.cardview.widget.CardView
-    android:id="@+id/cvCardBottom"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:cardCornerRadius="100dp">
-
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bnvBar"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvCardBottom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:background="@color/dark_purple"
-        app:itemIconSize="35dp"
-        app:itemIconTint="@drawable/bottom_nav_icon_color_selector"
-        app:itemTextColor="@drawable/bottom_nav_icon_color_selector"
+        android:focusableInTouchMode="false"
+        android:isScrollContainer="false"
+        app:cardCornerRadius="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/menu">
+        app:layout_constraintStart_toStartOf="parent">
 
-    </com.google.android.material.bottomnavigation.BottomNavigationView>
-</androidx.cardview.widget.CardView>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bnvBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|bottom"
+            android:background="@color/dark_purple"
+            android:focusableInTouchMode="false"
+            android:isScrollContainer="false"
+            app:itemIconSize="35dp"
+            app:itemIconTint="@drawable/bottom_nav_icon_color_selector"
+            app:itemTextColor="@drawable/bottom_nav_icon_color_selector"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:menu="@menu/menu" />
+
+    </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

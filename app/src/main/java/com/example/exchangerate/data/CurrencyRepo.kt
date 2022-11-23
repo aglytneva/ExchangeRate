@@ -4,4 +4,5 @@ import com.example.exchangerate.CurrencyModel
 
 interface CurrencyRepo {
     suspend fun getCurrencyFromRepo():List<CurrencyModel>
+    suspend fun getDateFromRepo():String
 }

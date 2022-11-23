@@ -1,6 +1,8 @@
 package com.example.exchangerate.data
 
 import com.example.exchangerate.CurrencyModel
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
 
 class CurrencyRepoImpl(val source: CurrencyRemoteSource) : CurrencyRepo {
     override suspend fun getCurrencyFromRepo(): List<CurrencyModel> {
@@ -8,5 +10,9 @@ class CurrencyRepoImpl(val source: CurrencyRemoteSource) : CurrencyRepo {
 //        return source.getRates().Valute.map { it.valute }
 //        Valute!!.map{it.valute}.toList().map { it!!.toDomain() }.toList()
 
+    }
+
+    override suspend fun getDateFromRepo(): String {
+        return formatToDayMonth(source.getRates().Date.toString())
     }
 }
