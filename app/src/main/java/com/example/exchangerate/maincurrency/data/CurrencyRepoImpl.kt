@@ -1,8 +1,6 @@
-package com.example.exchangerate.data
+package com.example.exchangerate.maincurrency.data
 
-import com.example.exchangerate.CurrencyModel
-import java.time.LocalDate
-import java.time.format.DateTimeFormatter
+import com.example.exchangerate.maincurrency.domain.CurrencyModel
 
 class CurrencyRepoImpl(val source: CurrencyRemoteSource) : CurrencyRepo {
     override suspend fun getCurrencyFromRepo(): List<CurrencyModel> {

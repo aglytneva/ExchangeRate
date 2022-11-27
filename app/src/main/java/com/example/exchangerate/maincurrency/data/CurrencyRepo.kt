@@ -1,6 +1,6 @@
-package com.example.exchangerate.data
+package com.example.exchangerate.maincurrency.data
 
-import com.example.exchangerate.CurrencyModel
+import com.example.exchangerate.maincurrency.domain.CurrencyModel
 
 interface CurrencyRepo {
     suspend fun getCurrencyFromRepo():List<CurrencyModel>

@@ -1,11 +1,12 @@
-package com.example.exchangerate.di
+package com.example.exchangerate.maincurrency.di
 
-import com.example.exchangerate.CurrencyInteractor
-import com.example.exchangerate.MainViewModel
-import com.example.exchangerate.data.CurrencyApi
-import com.example.exchangerate.data.CurrencyRemoteSource
-import com.example.exchangerate.data.CurrencyRepo
-import com.example.exchangerate.data.CurrencyRepoImpl
+import com.example.exchangerate.favoriteCurrency.domain.CurrencyFavoriteInteractor
+import com.example.exchangerate.maincurrency.domain.CurrencyInteractor
+import com.example.exchangerate.maincurrency.ui.MainViewModel
+import com.example.exchangerate.maincurrency.data.CurrencyApi
+import com.example.exchangerate.maincurrency.data.CurrencyRemoteSource
+import com.example.exchangerate.maincurrency.data.CurrencyRepo
+import com.example.exchangerate.maincurrency.data.CurrencyRepoImpl
 import okhttp3.OkHttpClient
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
@@ -46,5 +47,5 @@ val currencyMainScreenModule = module {
 
     single { CurrencyInteractor(get<CurrencyRepo>()) }
 
-    viewModel { MainViewModel(get<CurrencyInteractor>()) }
+    viewModel { MainViewModel(get<CurrencyInteractor>(),get<CurrencyFavoriteInteractor>()) }
 }

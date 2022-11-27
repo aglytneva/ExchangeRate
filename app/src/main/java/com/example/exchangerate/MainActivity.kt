@@ -4,8 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
 import androidx.fragment.app.Fragment
+import com.example.exchangerate.favoriteCurrency.ui.FavoriteFragment
+import com.example.exchangerate.maincurrency.ui.MainFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import org.koin.androidx.fragment.android.replace
 
 class MainActivity : AppCompatActivity() {
 
@@ -24,12 +25,12 @@ class MainActivity : AppCompatActivity() {
                         selectTab(MainFragment())
                     }
                 }
-//                R.id.itemBookmarks -> {
-//                    if (bottomNavMenu.selectedItemId != it.itemId) {
-//                        selectTab(MainFragment())
-//                    }
-//                }
-                else -> {}
+                R.id.itemBookmarks -> {
+                    if (bottomNavMenu.selectedItemId != it.itemId) {
+                        selectTab(FavoriteFragment())
+                    }
+                }
+                else -> {selectTab(MainFragment())}
             }
             true
         }
@@ -39,4 +40,5 @@ class MainActivity : AppCompatActivity() {
     private fun selectTab(fragment: Fragment) {
         supportFragmentManager.beginTransaction().replace(R.id.container, fragment).commit()
     }
+
 }

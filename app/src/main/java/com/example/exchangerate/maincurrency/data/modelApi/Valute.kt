@@ -1,4 +1,4 @@
-package com.example.exchangerate.data.modelApi
+package com.example.exchangerate.maincurrency.data.modelApi
 
 import com.google.gson.annotations.SerializedName
 

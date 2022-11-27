@@ -1,4 +1,4 @@
-package com.example.exchangerate
+package com.example.exchangerate.maincurrency.domain
 
 data class CurrencyModel (
     val currency :String,

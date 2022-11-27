@@ -1,11 +1,8 @@
-package com.example.exchangerate.data
+package com.example.exchangerate.maincurrency.data
 
-import com.example.exchangerate.CurrencyModel
-import com.example.exchangerate.data.modelApi.CurrencyRemoteModel
-import com.example.exchangerate.data.modelApi.Valute
+import com.example.exchangerate.maincurrency.domain.CurrencyModel
 
-import com.example.exchangerate.data.modelApi.ValuteModel
-import com.example.exchangerate.data.modelApi.ValuteX
+import com.example.exchangerate.maincurrency.data.modelApi.ValuteX
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 
@@ -216,7 +213,7 @@ val firstApiFormat = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss'+03:00'"
 
 fun formatToDayMonth(date: String): String {
     return "${LocalDate.parse(date, firstApiFormat).dayOfMonth.toString()}." +
-            "${LocalDate.parse(date,firstApiFormat).monthValue.toString()}." +
+            "${LocalDate.parse(date, firstApiFormat).monthValue.toString()}." +
             "${LocalDate.parse(date, firstApiFormat).year.toString().takeLast(2)}"
 }
 //"2022-11-24T11:30:00+03:00",

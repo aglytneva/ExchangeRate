@@ -8,7 +8,7 @@
     android:background="@color/background">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textViewFavorite"
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:background="@color/dark_purple"
@@ -17,13 +17,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
+        android:id="@+id/cardViewFavorite"
         android:layout_width="match_parent"
         android:layout_height="75dp"
         app:cardBackgroundColor="@color/dark_purple"
         app:cardCornerRadius="50dp"
         app:cardElevation="4dp"
-        app:layout_constraintBottom_toTopOf="@+id/etSearchCurrency"
+        app:layout_constraintBottom_toTopOf="@+id/etSearchCurrencyFavorite"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -34,7 +34,7 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/tvMainText"
+                android:id="@+id/tvMainTextFavorite"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
@@ -47,7 +47,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/tvDate"
+                android:id="@+id/tvDateFavorite"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
@@ -61,31 +61,31 @@
     </androidx.cardview.widget.CardView>
 
     <EditText
-        android:id="@+id/etSearchCurrency"
+        android:id="@+id/etSearchCurrencyFavorite"
         android:layout_width="308dp"
         android:layout_height="50dp"
         android:hint="Поиск"
         android:imeOptions="actionDone"
         android:singleLine="true"
-        app:layout_constraintBottom_toTopOf="@+id/rvCurrencyRate"
-        app:layout_constraintEnd_toStartOf="@+id/ivSort"
+        app:layout_constraintBottom_toTopOf="@+id/rvCurrencyRateFavorite"
+        app:layout_constraintEnd_toStartOf="@+id/ivSortFavorite"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+        app:layout_constraintTop_toBottomOf="@+id/cardViewFavorite" />
 
     <ImageView
-        android:id="@+id/ivSort"
+        android:id="@+id/ivSortFavorite"
         android:layout_width="32dp"
         android:layout_height="32dp"
-        app:layout_constraintBottom_toTopOf="@+id/rvCurrencyRate"
+        app:layout_constraintBottom_toTopOf="@+id/rvCurrencyRateFavorite"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.797"
-        app:layout_constraintStart_toEndOf="@+id/etSearchCurrency"
-        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        app:layout_constraintStart_toEndOf="@+id/etSearchCurrencyFavorite"
+        app:layout_constraintTop_toBottomOf="@+id/cardViewFavorite"
         app:srcCompat="@drawable/ic_baseline_filter_list_24" />
 
     <include
-        android:id="@+id/itemSort"
-        layout="@layout/item_sort"
+        android:id="@+id/itemSortFavorite"
+        layout="@layout/item_sort_favorite"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
@@ -94,10 +94,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.855"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etSearchCurrency" />
+        app:layout_constraintTop_toBottomOf="@+id/etSearchCurrencyFavorite" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvCurrencyRate"
+        android:id="@+id/rvCurrencyRateFavorite"
         android:layout_width="410dp"
         android:layout_height="611dp"
         android:orientation="vertical"
@@ -106,7 +106,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etSearchCurrency"
+        app:layout_constraintTop_toBottomOf="@+id/etSearchCurrencyFavorite"
         app:layout_constraintVertical_bias="1.0" />
 
 

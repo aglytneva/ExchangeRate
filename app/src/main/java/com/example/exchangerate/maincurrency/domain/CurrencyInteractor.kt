@@ -1,8 +1,8 @@
-package com.example.exchangerate
+package com.example.exchangerate.maincurrency.domain
 
 import com.example.exchangerate.base.Either
 import com.example.exchangerate.base.attempt
-import com.example.exchangerate.data.CurrencyRepo
+import com.example.exchangerate.maincurrency.data.CurrencyRepo
 
 
 class CurrencyInteractor(private val currencyRepo: CurrencyRepo) {
